@@ -27,6 +27,28 @@ theme: minima
 gems:
   - jekyll-feed
 
+#==========Lines added manually===
+default:
+  -
+    scope:
+      path: ""
+    values:
+    layout: "post"
+  -
+
+# Serving
+port: 8080
+
+#output
+#timezone: America/New_York
+
+#pluings
+  #emoji
+gems:
+  - jemoji
+#==========End of Lines added manually===
+
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
