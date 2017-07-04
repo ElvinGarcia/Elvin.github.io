@@ -40,7 +40,7 @@ default:
 port: 8080
 
 #output
-#timezone: America/New_York
+timezone: America/New_York
 
 #pluings
   #emoji
