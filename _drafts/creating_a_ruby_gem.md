@@ -8,27 +8,30 @@ tags: learn.co project
 
 # Creating a Ruby Gem with Bundler
 
-Creating a Ruby gem could an intimidating task but a well worth it goal to pursue. I"ll be going over on how to get started, the structure of it all and eventually publish your newly minted gem.
+Creating a Ruby gem can be an intimidating task. Nonetheless a well worthy goal. I"ll be going over on how to get started creating a ruby gem and the structure of a gem.
 
-## Gem File structure
-To get a better understanding of gem's structure we will go over the methodical structure it gems require. We will start by creating a gem with bundler which is a gem manager. More information on [Bundler](https://bundler.io/) can be found at the following link. [https://bundler.io/Bundler](https://bundler.io/)
+## Lets Get Started
 
-We will start by creating an app 'app_name'.
-Once we open up terminal on a mac and navigate to the directory we want our gem to reside we type the following
+# Gem File structure
+To get a better understanding of a gem's structure we will go over the methodical structure most gems posses. We will start by creating a gem with bundler which is a ruby gem manager. More information on [Bundler](https://bundler.io/) can be found at the following site. [https://bundler.io/Bundler](https://bundler.io/)
+
+We will start by creating an app called 'product_review'.
+The app will scrape a live site and return its information back to the user in a well organize order.
+Once we fire up the terminal , given that we already have bundler install in out system, and navigated to the directory we want our gem to reside we simply type the following command `:`
 
     `bundle gem app_name`
 
-Once that completed you should have a similar file structure as the following
+Once its completed you should have a similar file structure as the following
 
    ![GemStructure]({{ site.url }}/images/RubyGem_File_Structure.png)
 
    {%include creating_a_ruby_gem_table.html%}
 
 
-## Requiring files
+# Requiring files
 
 The first step in creating a ruby gem is requiring the necessary files for your environment. What this means is telling your gem what files it should know about. I place this code in the the lib directory/product_review.rb
-On my product_review gem I required the following files.
+On my product_review app. I required the following files.
 
 
       require "nokogiri"
@@ -71,7 +74,7 @@ On my product_review gem I required the following files.
   Line 3 , 4 and 5 are requiring irb session and the file that holds all the paths to the file containing the ruby code that was previously written.
   Line 16 starts the IRB session. This simple setup allows me to test my code in IRB before deploying it.
 
-## First call
+# First call
   When first executing our gem the first file that gets run is located in
   > `bin/product_review`
 
@@ -96,10 +99,16 @@ The first line tells the terminal where to search for the ruby interpreter while
 
   To check the file permission.
 
-## Some Best Practice
+# Some Best Practice
 
   * Try to write has abstract as possible. This will allow for better maintainability and when adding features.
 
   * Try to follow the DRY principle. Don't repeat yourself.
+
+  * Write a good description on for your app
+
+  * Details on how others can contribute to your app
+
+  * Link to license permission
 
   * Don't ever give up
