@@ -10,18 +10,19 @@ tags: learn.co project
 
 Creating a Ruby gem can be an intimidating task. Nonetheless a well worthy goal. I"ll be going over on how to get started creating a ruby gem and the structure of a gem.
 
-## Lets Get Started
+## Getting Started
 
 # Gem File structure
-To get a better understanding of a gem's structure we will go over the methodical structure most gems posses. We will start by creating a gem with bundler which is a ruby gem manager. More information on [Bundler](https://bundler.io/) can be found at the following site. [https://bundler.io/Bundler](https://bundler.io/)
+To get a better understanding of a gem's structure we will go over the methodical structure most gems posses. We will start by creating a gem with bundler, a ruby gem manager. More information on [Bundler](https://bundler.io/) can be found at the following site. [https://bundler.io/Bundler](https://bundler.io/)
 
-We will start by creating an app called 'product_review'.
-The app will scrape a live site and return its information back to the user in a well organize order.
-Once we fire up the terminal , given that we already have bundler install in out system, and navigated to the directory we want our gem to reside we simply type the following command `:`
+I created an app called 'product_review'.
+The app will scrape a live site and return the scraped information back to the user in a well organize order.
+
+First we need to navigate to the directory where we want our app to reside. Then we simply type the following command `:`
 
     `bundle gem app_name`
 
-Once its completed you should have a similar file structure as the following
+Once the process is completed you should have a structure similar to the following
 
    ![GemStructure]({{ site.url }}/images/RubyGem_File_Structure.png)
 
@@ -30,10 +31,9 @@ Once its completed you should have a similar file structure as the following
 
 # Requiring files
 
-The first step in creating a ruby gem is requiring the necessary files for your environment. What this means is telling your gem what files it should know about. I place this code in the the lib directory/product_review.rb
-On my product_review app. I required the following files.
+The first step in creating this app is requiring the necessary files for your environment. What this means is telling your gem what files it should know about. I place this code in the the lib directory inside the product_review.rb file. This is how the file looks like.
 
-
+>```ruby
       require "nokogiri"
       require "open-uri"
       require "pry"
@@ -42,37 +42,54 @@ On my product_review app. I required the following files.
       require_relative "../lib/product_reviews/catagories"
       require_relative "../lib/product_reviews/product_controller"
       require_relative "../lib/product_reviews/board"
+```
 
 #### ProTip
->  `Always use require_relative when requiring file.
-    Typically require is used when requiring from Ruby's standard library.`
+>  `Always use `require_relative` when requiring files.
+    Usually the keyword `require` is used when acquiring from the Ruby's standard library.`
 
-  Once that is settle we could start requiring any other gems that our gem will depend on. We will specify these gems in our Gemfile.
+Once that's done we could start requiring any other dependencies that our app might require, such as gems that our app depends on to run smoothly. We will specify these gems in our Gemfile.
+The Gemfile should look something like the following if acquiring gems.
 
-  After we taken care of our gem dependencies we could start writing our code inside the directory with the same name as our gem inside the lib directory.
-  in my case that would be `lib/product_reviews`
 
-  I would writing each class in individual files with the *.lib* extension and making sure telling my gem that the file exist by requiring it in the *product_reviews.rb* file inside the lib directory.
+>```ruby
+    gem "nokogiri"
+    gem "rails", "3.0.0.beta3"
+    gem "rack",  ">=1.0"
+    gem "thin",  "~>1.1"
+```
+
+ More information can be found at [https://bundler.io/v1.5/gemfile.html](https://bundler.io/v1.5/gemfile.html)
+
+  After we taken care of our gem dependencies we could start writing our code inside the directory with the same name as our gem which is located inside the lib directory.
+
+  ![GemStructure]({{ site.url }}/images/RubyGem_File_Structure.png)
+
+  In my case that would be `lib/product_reviews`
+
+  maintainability is key when writing out your application. I Usually write each class in a separate file with the *lib* directory inside the the directory with the same name as my app as shown above. I also making sure my environment file is updated accordingly.
 
 
 #### ProTip
   >  `When using git make sure to commit often and write often.`
 
   Once your code is in place and passing its time to setup your executable.
-  In your *bin* directory you will find two file. Console and setup will play a major part in executing your gem.
+  In your *bin* directory you will find two files `Console` and `setup` . These files will play a major part in executing your gem.
 
 ## bin/console
   The console file is used to experiment with your could before releasing it. It allows us to set an experimental environment to test our gem.
 
   ![bin-console](/images/bin-console.png)
 
-  The console file doesn't require any extension since it will be interacting directly with the terminal. As a result we need to specify exactly where it can find our ruby interpreter, in order to interpret our code. As show on line one on the above picture.  
+  The console file doesn't require any extension since it will be interacting directly with the terminal. As a result we need to specify exactly where it would find our ruby interpreter, in order to have our code interpret. As show on line 1 on the above picture.  
   This works because most modern systems have an executable at
-  > `#!/usr/bin/env ruby `
+  > ```
+    #!/usr/bin/env ruby
+    ```
 
   Which will execute the utility that you pass to it based on your path.
-  Line 3 , 4 and 5 are requiring irb session and the file that holds all the paths to the file containing the ruby code that was previously written.
-  Line 16 starts the IRB session. This simple setup allows me to test my code in IRB before deploying it.
+  Line 3 , 4 and 5 are requiring irb and our environment file.
+  Line 16 starts the IRB session. This simple setup allows us to test code that was written in IRB before deploying it.
 
 # First call
   When first executing our gem the first file that gets run is located in
@@ -82,9 +99,14 @@ On my product_review app. I required the following files.
 
 > ` #!/usr/bin/env ruby `
 >
-> ` require_relative"../config/environment" `
+>```ruby
+  require_relative"../config/environment"
+ ```
+
 >
-> ` ProductReviews::ProductController.new.call `
+ ```ruby
+  ProductReviews::ProductController.new.call
+ ```
 
 The first line tells the terminal where to search for the ruby interpreter while the second lines loads our ruby environment which contains the path to all our files necessary to run this gem. The third line creates an object and executes the instance method `call`. Since this object will mostly be responsible for the flow of out program it's only valid that in most cases it's refer as controller, hence ProductController.
 
