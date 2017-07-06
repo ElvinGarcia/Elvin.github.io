@@ -111,26 +111,26 @@ The Gemfile should look something like the following if acquiring gems.
 The first line tells the terminal where to search for the ruby interpreter while the second lines loads our ruby environment which contains the path to all our files necessary to run this gem. The third line creates an object and executes the instance method `call`. Since this object will mostly be responsible for the flow of out program it's only valid that in most cases it's refer as controller, hence ProductController.
 
 #### ProTip
->  Since we are working directly with the systems CLI it's logical to expect the system to protect its self from hard by not giving out `bin/product_review` file execucable permission. This can easily be change by run
+>  Since we are working directly with the systems CLI it's only logical to expect the system to protect itself from harm by being discriminant against which files have executable rights. Has a result when initially trying to run  `bin/product_review` you might get a `permission denied` error. This can be easily changed by changing the file permission of the file with the following command
 
-  > `chmod +x file_name`
+  > `$chmod +x file_name`
 
->  and
+  and
 
-  > `s –l `
+  > `$s –l `
 
   To check the file permission.
 
-# Some Best Practice
+# Some Best Practice to consider
 
-  * Try to write has abstract as possible. This will allow for better maintainability and when adding features.
+  * Try to write your code as abstract as possible. This will allow for better maintainability and easier to add features in the future.
 
-  * Try to follow the DRY principle. Don't repeat yourself.
+  * Try to follow the DRY principle. Don't repeat yourself by reusing code already written.
 
-  * Write a good description on for your app
+  * Write a good description for your app.
 
-  * Details on how others can contribute to your app
+  * Details on how others can contribute to your app.
 
-  * Link to license permission
+  * Link to your app's license permission
 
   * Don't ever give up
