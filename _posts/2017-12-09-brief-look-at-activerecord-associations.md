@@ -1,7 +1,6 @@
 ---
-title: A Brief Look at Active Record Associations
----
 
+---
 
 ##### Rail Supported Associations:
   - *belongs_to*
