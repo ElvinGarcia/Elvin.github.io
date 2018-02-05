@@ -1,8 +1,11 @@
 ---
-
+layout: post
+title:  "Working With Sinatra and the MVC Architecture"
+categories: Sinatra
+tags: learn.co project
 ---
 
-##### Working With Sinatra and the MVC Architecture
+#### Working With Sinatra and the MVC Architecture
 
 Most web applications follow a similar convention in terms of their functionality and structure. In this posting I'll illustrate how a simple application follows common structures and logic found on bigger sites.
 
@@ -31,3 +34,15 @@ With time your applications needs will start to grow and a clean file structure 
 A great a approach to follow is to build a [rails](https://en.wikipedia.org/wiki/Ruby_on_Rails) like file structure.
 
 ![MVCStructure]({{ site.url }}/images/MVC_file_structure.png)
+
+##### The app folder contains your [MVC structure](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
+The Model-View-Controller (MVC) architectural pattern breaks down your application into three main components: the model, the view, and the controller.
+
+The model
+ The model is responsible for your applications logic and application specifics data manipulation. It also specifies  the applications relationship with other tables and applications. Such relations are not limited to one-to-many, one-to-one and many-to-many .  
+
+The View  
+  The view is responsible for the user interface. It directly interfaces with the users.
+
+The controller
+  The controller is like the mediator for the controller and the view. For the most part it directs the application traffic. Controller objects can also perform setup and coordinating tasks for an application and manage the life cycles of other objects.
