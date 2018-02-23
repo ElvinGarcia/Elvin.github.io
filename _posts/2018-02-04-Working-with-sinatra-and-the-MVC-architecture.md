@@ -66,4 +66,4 @@ The Model-View-Controller (MVC) architectural pattern breaks down your applicati
   >[Gemfile](https://bundler.io/) acquires all the third party gems that your application will be using. Such gems might include Sinatra, ActiveRecord, Shotgun and testing apps like Pry, and Tux
 
 *Rakefile*
-  > [Rakefile](https://en.m.wikipedia.org/wiki/Rake_(software) is used to create task for your application. These task include the task of creating migrations, entering a testing console and many more. You could either create your own process or acquire rake task from gems and integrate them in your rake file such as the ```sinatra-activerecord``` gem. Typing ```rake -T``` in your console displays all available rake task.
+  > [Rakefile](https://en.m.wikipedia.org/wiki/Rake_(software) ) is used to create task for your application. These task include the task of creating migrations, entering a testing console and many more. You could either create your own process or acquire rake task from gems and integrate them in your rake file such as the ```sinatra-activerecord``` gem. Typing ```rake -T``` in your console displays all available rake task.
