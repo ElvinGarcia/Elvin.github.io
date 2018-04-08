@@ -8,6 +8,8 @@ tags: ruby shopify
 ### Ruby Style Guide Suggestions (According to Shopify)
 
 *  Make all lines of your methods operate on the same level of abstraction. *(Single Level of Abstraction Principle)*
+  By making each have a single functionality or responsibility not only leads to better organized code but for better readability and refactoring.
+  
   ```
   [example goes here ]
   ```
