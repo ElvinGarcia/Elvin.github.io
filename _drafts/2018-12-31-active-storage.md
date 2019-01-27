@@ -26,31 +26,11 @@ There will be times where you would want to link an attachment on your page. Act
 
 Transforming attachments requires the use of third party gems such as `mini_magick`. Mini Magick allows for certain files such as pdfs to be preview and images to be resized and transform.  Calling `variant(resize:"sizexsize")` to the attachment will resize it while calling `preview(resize:"sizexsize")` will preview the attachment if possible. When preview videos Active Storage uses the first frame for the preview.
 
-Active Storage allows direct uploads effectively transfering any attachment from the client directly to the cloud service.
+Active Storage also allows for direct uploads transfering any attachment from the client directly to cloud services.
+In order to activate this feature Rails asset pipeline must be setup correctly by including `activestorage.js` in your application bundle.
+Once its enable using either npm or via Rails asset pipeline `direct_upload: true` is passed from the view to allow direct upload.
+Direct upload is intergratable with Javascripts framework or if you want to customize a drag and drop feature its possible by calling the  DirectUpload class. Direct upload Javascript events allow progress indication while the file upload.
 
-** Active Storage.
+Since Active Storage is a fairly new library its code base is easier to navigate and explore for the curious among us. 
 
--	Idmplementing activeStorage  in your Rails application
-[x] What it is and why
-    [x] intergration
-    [x] paperclip
-[x] Setup
-    [x] Disk srv
-    [x] cloud srv
-    [x] mirror srv
-[x] Attaching Files to Records
-    [x] associations (has_one, has_many)
-    [x] attach files
-[x] Removing files
-[x] Linking Files
-[x] Downloading Files
-[x] Transforming files
-[x] Previewing Files
-[] Direct Uploads
-    [] Direct upload installation
-    [] Direct upload JavaScript events
-    [] Example
-    [] Integrating with Libraries or Frameworks
 
-[] Discarding Files Stored During System Tests
-[x] Implementing Support for Other Cloud Services
