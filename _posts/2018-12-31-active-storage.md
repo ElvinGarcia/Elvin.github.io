@@ -33,7 +33,7 @@ By default, your local storage is used.
 
 tells Rails which provider to use.
 
-------------
+
 Once the proper tables are setup and the application is configured properly all that is left is the proper associations to be made within your models.
 
 Active Storage supports `has_one`, `has_many` and many more associations by adding the suffix attached to the association such as `has_one_attached`.
