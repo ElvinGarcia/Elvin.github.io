@@ -4,3 +4,5 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
+[NOtes](./notes/index.html)
+[TEch](./technical_blog/index.html)

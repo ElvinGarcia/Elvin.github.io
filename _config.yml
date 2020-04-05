@@ -18,12 +18,18 @@ email: Technical_Blog@ElvinGarcia.com
 description: > # Just a regular technical blog.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username:
+twitter_username: ElvinTheCreator
 github_username: ElvinGarcia
 linkedin_username: Elvin-Garcia
 
 # Build settings
-markdown: kramdown
+markdown: HTMLPipeline #kramdown
+html_pipeline:
+  filters:
+    - "markdownfilter"
+    - "sanitizationfilter"
+    - "emojifilter"
+    - "mentionfilter"
 theme: minima
 plugins:
   - jekyll-feed
@@ -32,7 +38,7 @@ plugins:
 default:
   -
     scope:
-      path: ""
+      path: 
     values:
     layout: "post"
   -
@@ -47,6 +53,7 @@ timezone: America/New_York
   #emoji
 gems:
   - jemoji
+  - jekyll-html-pipeline
 #==========End of Lines added manually===
 
 
