@@ -17,7 +17,7 @@ title: Technical Blog
 email: Technical_Blog@ElvinGarcia.com
 description: > # Just a regular technical blog.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://wwww.ElvinGarcia.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ElvinTheCreator
 github_username: ElvinGarcia
 linkedin_username: Elvin-Garcia
@@ -49,9 +49,7 @@ port: 8080
 #output
 timezone: America/New_York
 
-#pluings
-  #emoji
-gems:
+plugins:
   - jemoji
   - jekyll-html-pipeline
 #==========End of Lines added manually===
