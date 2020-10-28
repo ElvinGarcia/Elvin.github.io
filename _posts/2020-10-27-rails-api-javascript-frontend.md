@@ -8,7 +8,7 @@ tags: ruby rails active storage
 # Rails Backend with a Javacript Frontend
     Most developers know Ruby on Rails also refered such just Rails, as a monolith framework where one app hosts  it all. These type of applications have its place in ecosystem on web developement. Just as it is true for Rails having its advantage over other type of framework it also have it's drawbacks. As a result to some of the drawbacks you might encouter when using Rails as a monilith application framework Rails also offers an API (Application Programming Interface) version.
 
- ## Advantages of using Rails as an API
+## Advantages of using Rails as an API
     Some of the advantage of using Rails as an API is that it frees up the frontend to other languages. This approch allows for more choices and options. By allowing the frontend to be detached we are able to host the backend with a different service provider than our front end.
 
 ## How it works
