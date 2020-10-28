@@ -269,8 +269,9 @@ DEPENDENCIES
   github-pages
   jekyll-admin
   jekyll-feed (~> 0.6)
+  kramdown
   minima (~> 2.0)
   tzinfo-data
 
 BUNDLED WITH
-   1.17.3
+   2.1.4
