@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Working With Active Storage"
+title:  "Single Page Application (SPA) With Rails API and Javascript Fromtend"
 categories: RAILS
 tags: ruby rails active storage
 ---
