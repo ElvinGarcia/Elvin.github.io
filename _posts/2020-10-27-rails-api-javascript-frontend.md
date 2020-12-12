@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SPA With a Rails API and a Javascript Frontend"
+title:  "Rails API With a Javascript Frontend SPA"
 categories: RAILS
 tags: ruby rails active storage
 ---
